@@ -1,0 +1,59 @@
+<h2 class="text-center">Add Post</h2>
+<hr />
+<form [formGroup]="authForm" (ngSubmit)="submitForm()">
+  <div class="form-row post-form">
+    <fieldset class="form-group col-md-6">
+      <label for="input4">Country</label>
+      <input
+        formControlName="country"
+        type="text"
+        class="form-control"
+        id="input4"
+        placeholder="Country"
+      />
+    </fieldset>
+    <fieldset class="form-group col-md-6">
+      <label for="inputPassword4">Tests</label>
+      <input
+        formControlName="tests"
+        type="number"
+        class="form-control"
+        id="inputPassword4"
+        placeholder="Tests"
+      />
+    </fieldset>
+    <fieldset class="form-group col-md-6">
+      <label for="input4">Cases</label>
+      <input
+        formControlName="cases"
+        type="number"
+        class="form-control"
+        id="input4"
+        placeholder="Cases"
+      />
+    </fieldset>
+    <fieldset class="form-group col-md-6">
+      <label for="inputPassword4">Recovered</label>
+      <input
+        formControlName="recovered"
+        type="number"
+        class="form-control"
+        id="inputPassword4"
+        placeholder="Recovered"
+      />
+    </fieldset>
+    <fieldset class="form-group col-md-6">
+      <label for="inputPassword4">Deaths</label>
+      <input
+        formControlName="deaths"
+        type="number"
+        class="form-control"
+        id="inputPassword4"
+        placeholder="Deaths"
+      />
+    </fieldset>
+    <fieldset>
+      <button type="submit" class="btn btn-primary post-button">Submit</button>
+    </fieldset>
+  </div>
+</form>
