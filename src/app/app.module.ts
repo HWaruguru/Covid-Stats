@@ -9,6 +9,7 @@ import { DateCountPipe } from './date-count.pipe';
 import { AuthComponent } from './auth/auth.component';
 import { PostComponent } from './post/post.component';
 import { PostFormComponent } from './post-form/post-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { PostFormComponent } from './post-form/post-form.component';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule
   ],
