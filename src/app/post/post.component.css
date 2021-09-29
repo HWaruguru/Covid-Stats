@@ -1,0 +1,33 @@
+.post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.post-card {
+    width: 80%;
+}
+
+form {
+    width: 80%;
+}
+
+button {
+    margin-top: 1rem;
+    float: right;
+}
+
+.comment-card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.post-footer a{
+    display: inline;
+    float: right;
+}
+
+.post-footer p{
+    display: inline;
+}

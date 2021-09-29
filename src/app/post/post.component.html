@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 class="text-center">Post</h2>
+    <hr />
+    <div class="col-sm-12 post">
+        <div class="card mb-3 post-card">
+            <div class="card-header bg-transparent">
+                {{ post.country }} Covid Stats
+            </div>
+            <div class="card-body">
+                <p class="card-text">Tests:{{ post.tests }}</p>
+                <p class="card-text">Cases: {{ post.cases }}</p>
+                <p class="card-text">Recovered: {{ post.recovered }}</p>
+                <p class="card-text">Deaths: {{ post.deaths }}</p>
+            </div>
+            <div class="card-footer bg-transparent post-footer">
+                <p>Posted {{ post.datePosted | dateCount }}</p>
+                <a href=""><i class="fa fa-fw fa-trash delete"></i></a>
+            </div>
+        </div>
+        <form [formGroup]="commentForm" (ngSubmit)="submitForm()">
+            <div class="form-row comment-form">
+                <fieldset class="form-group">
+                    <label for="input4">Add a comment</label>
+                    <textarea formControlName="comment" type="text" class="form-control" id="input4"
+                        placeholder="Comment"></textarea>
+                </fieldset>
+                <fieldset>
+                    <button type="submit" class="btn btn-primary post-button">
+                        Submit
+                    </button>
+                </fieldset>
+            </div>
+        </form>
+        <div class="card comment_card comment-card" style="width: 100%">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>{{comment.comment}}</p>
+                    <footer class="blockquote-footer">{{user.username}}</footer>
+                </blockquote>
+                <a href=""><i class="fa fa-fw fa-trash delete"></i></a>
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <footer class="blockquote-footer">No comments yet!</footer>
+                </blockquote>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
