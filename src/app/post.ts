@@ -1,15 +1,15 @@
 
 export class Post {
-    id: number;
     country: string;
     tests: number;
     cases: number;
     recovered: number;
     deaths: number;
-    datePosted: Date;
+    datePosted: string;
+    id: number;
    
     
-    constructor(id: number, country: string, tests: number, cases: number, recovered: number, deaths: number, datePosted: Date) {
+    constructor(id: number, country: string, tests: number, cases: number, recovered: number, deaths: number, datePosted: string) {
         this.id = id;
         this.country = country;
         this.tests = tests;
