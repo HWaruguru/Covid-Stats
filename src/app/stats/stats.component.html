@@ -1,0 +1,55 @@
+<div class="col-md-12">
+    <div class="continent_tabs">
+        <ul class="nav nav-tabs">
+            <li class="nav-item tabp">
+                <a class="nav-link linkp" aria-current="page" href="/">All</a>
+            </li>
+            <li class="nav-item tabp">
+                <a class="nav-link linkp" href="">Africa</a>
+            </li>
+            <li class="nav-item tabp">
+                <a class="nav-link linkp" href="">South America</a>
+            </li>
+            <li class="nav-item tabp">
+                <a class="nav-link linkp" href="">North America</a>
+            </li>
+            <li class="nav-item tabp">
+                <a class="nav-link linkp" href="">Asia</a>
+            </li>
+            <li class="nav-item tabp">
+                <a class="nav-link linkp" href="">Antarctica</a>
+            </li>
+            <li class="nav-item tabp">
+                <a class="nav-link linkp" href="">Europe</a>
+            </li>
+            <li class="nav-item tabp">
+                <a class="nav-link linkp" href="">Oceania</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="header">Countries</div>
+
+    <div class="col-md-12">
+        <div class="countries">
+            <div class="card  mb-3" *ngFor="let post of posts; let i = index">
+                <div class="card-header bg-transparent ">{{ post.country }} Covid Stats</div>
+                <div class="card-body">
+                    <p class="card-text">Tests:{{post.tests}}</p>
+                    <p class="card-text">Cases: {{post.cases}}</p>
+                    <p class="card-text">Recovered: {{post.recovered}}</p>
+                    <p class="card-text">Deaths: {{post.deaths}}</p>
+                </div>
+            <div class="card-footer bg-transparent post-footer">
+                <p>Posted {{ post.datePosted | dateCount }}</p>
+                <button type="button" class="btn btn-dark comment-btn">Comment</button>
+
+            </div>
+
+                
+            </div>
+        </div>
+
+
+    </div>
+</div>

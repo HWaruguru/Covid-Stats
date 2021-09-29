@@ -1,0 +1,45 @@
+.continent_tabs {
+    display: flex ;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.tabp {
+    margin: 2px;
+}  
+
+.linkp{
+    color: #1073E5 !important;
+}
+
+.header {
+    margin: 10px;
+    display: flex ;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 40px;
+}
+
+.countries {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .card {
+    margin: 1%;
+    border-radius: 4px;
+    width: 24rem;
+}
+
+.comment-btn{
+    display: inline;
+    float: right;
+}
+
+.post-footer p{
+    display: inline;
+}
