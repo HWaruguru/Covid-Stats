@@ -8,14 +8,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" routerLink="/covid-stats">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/add-post" *ngIf="currentUser">Add Post</a>
         </li>
       </ul>
       <span class=" form-inline my-2 my-lg-0 auth sign">
-        <a class="nav-link " routerLink="/login"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;
+        <a class="nav-link" routerLink="/login" *ngIf="currentUser == null"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;
           Sign In</a>
-        <a class="nav-link" routerLink="/register"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;
+        <a class="nav-link" routerLink="/register" *ngIf="currentUser == null"><i class="fa fa-sign-up" aria-hidden="true"></i>&nbsp;
           Sign Up</a>
+        <a class="nav-link" routerLink="/register" *ngIf="currentUser" (click)="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;
+          Sign Out</a>
       </span>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
