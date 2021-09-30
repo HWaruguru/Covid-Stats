@@ -10,7 +10,7 @@ import { Comment } from '../comment';
 export class AuthService {
   private currentUserSubject: BehaviorSubject<any>;
   public currentUser: Observable<any>;
-  private baseURL = "http://localhost:5000"
+  private baseURL = "https://covidstats19.herokuapp.com"
 
   constructor(private http: HttpClient) {
     this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(localStorage.getItem('currentUser')));
